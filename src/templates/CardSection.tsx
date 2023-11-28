@@ -32,7 +32,7 @@ const cardData = [
   },
 ];
 
-const CardSection = ({ ref }) => {
+const CardSection = ({ ref }: any) => {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' && window.innerWidth <= 768,
   );

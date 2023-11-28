@@ -2,7 +2,7 @@ import { Background } from '../background/Background';
 import { CenteredFooter } from '../footer/CenteredFooter';
 import { Section } from '../layout/Section';
 
-const Footer = ({ refs }) => (
+const Footer = ({ refs }: any) => (
   <Background>
     <Section>
       <div ref={refs}>

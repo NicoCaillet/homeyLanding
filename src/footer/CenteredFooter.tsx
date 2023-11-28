@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
 type ICenteredFooterProps = {
-  logo: ReactNode;
-  iconList: ReactNode;
-  children: ReactNode;
+  logo?: ReactNode;
+  iconList?: ReactNode;
+  children?: ReactNode;
 };
 
 const CenteredFooter = (props: ICenteredFooterProps) => (

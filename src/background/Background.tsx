@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 type IBackgroundProps = {
   children: ReactNode;
-  color: string;
+  color?: string;
 };
 
 const Background = (props: IBackgroundProps) => (

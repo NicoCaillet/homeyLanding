@@ -36,22 +36,24 @@ const MobileNavbar = ({ refs, navigateTo }: any) => {
             />
           </div>
           <div className="mt-5">
-            <div className="block py-3  lg:inline-block">Home</div>
+            <div className="block py-3  lg:inline-block" onClick={toggleNavbar}>
+              Home
+            </div>
             <div
               className="block py-3  lg:inline-block "
-              onClick={() => navigateTo(refs.verticalFeaturesRef)}
+              onClick={() => navigateTo(refs.verticalFeaturesRef, 0)}
             >
               How it Works
             </div>
             <div
               className="block py-3  lg:inline-block "
-              onClick={() => navigateTo(refs.cardSectionRef)}
+              onClick={() => navigateTo(refs.verticalFeaturesRef, 2550)}
             >
               For LandLords
             </div>
             <div
               className="block py-3  lg:inline-block "
-              onClick={() => navigateTo(refs.footerRef)}
+              onClick={() => navigateTo(refs.footerRef, 0)}
             >
               Contact
             </div>

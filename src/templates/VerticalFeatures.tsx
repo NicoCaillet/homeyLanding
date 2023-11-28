@@ -22,7 +22,7 @@ const sectionElements = [
   },
 ];
 
-const VerticalFeatures = ({ refs }) => {
+const VerticalFeatures = ({ refs }: any) => {
   return (
     <Section
       title="Live, Lounge, Connect: Homey Co-Living"
@@ -47,6 +47,7 @@ const VerticalFeatures = ({ refs }) => {
         imageAlt="Third feature alt text"
         sectionData={sectionElements}
         ref={refs}
+        activeButton={true}
       />
     </Section>
   );

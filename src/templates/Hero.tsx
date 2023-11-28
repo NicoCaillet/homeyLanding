@@ -14,7 +14,7 @@ const Hero = ({ allRefs }: any) => {
     typeof window !== 'undefined' && window.innerWidth <= 768,
   );
 
-  const scrollToSection = (ref, add?) => {
+  const scrollToSection = (ref: any, add?: any) => {
     if (ref && ref.current) {
       window.scrollTo({
         top: ref.current.offsetTop + add,

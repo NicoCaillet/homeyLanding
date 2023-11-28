@@ -22,6 +22,7 @@ type IVerticalFeatureRowProps = {
   lastText?: string;
   ref?: any;
   sectionData?: Bar[];
+  activeButton?: boolean;
 };
 const numbers = [
   {
@@ -104,13 +105,15 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           </div>
         </div>
 
-        <div className="sm:flex sm:justify-center">
-          <a href="https://www.instagram.com/homey_madcity/">
-            <button className="mt-8 w-44 rounded-lg bg-primary-graytone p-3 text-xl text-white sm:w-52 sm:font-semibold">
-              Become a Host
-            </button>
-          </a>
-        </div>
+        {props.activeButton && (
+          <div className="sm:flex sm:justify-center">
+            <a href="https://www.instagram.com/homey_madcity/">
+              <button className="mt-8 w-44 rounded-lg bg-primary-graytone p-3 text-xl text-white sm:w-52 sm:font-semibold">
+                Become a Host
+              </button>
+            </a>
+          </div>
+        )}
       </div>
 
       <div className="m-auto my-12 flex w-[100%] justify-between lg:w-[85%] sm:my-2 sm:block">

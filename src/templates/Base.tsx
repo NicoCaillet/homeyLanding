@@ -10,10 +10,10 @@ import { Hero } from './Hero';
 import { VerticalFeatures } from './VerticalFeatures';
 
 const Base = () => {
-  const verticalFeaturesRef = useRef();
-  const cardSectionRef = useRef();
-  const clientLayoutRef = useRef();
-  const footerRef = useRef();
+  const verticalFeaturesRef = useRef<HTMLDivElement>(null);
+  const cardSectionRef = useRef<HTMLDivElement>(null);
+  const clientLayoutRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   const allRefs = {
     verticalFeaturesRef,
