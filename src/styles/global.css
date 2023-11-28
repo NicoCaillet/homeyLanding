@@ -1,0 +1,41 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.column {
+  text-align: center;
+  margin: 15px;
+}
+
+.dashclass {
+  background-image: linear-gradient(
+    to right,
+    white 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 28px 3px;
+  background-repeat: repeat-x;
+  transform: translateY(39px);
+}
+
+@media (max-width: 768px) {
+  .column {
+    flex: 100%;
+  }
+}
+
+/* html{
+    font-style: "";
+} */
