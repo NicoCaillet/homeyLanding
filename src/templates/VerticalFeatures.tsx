@@ -45,7 +45,7 @@ const VerticalFeatures = ({ refs }) => {
         addtext="Landlords: "
         image="/assets/images/mountain.png"
         imageAlt="Third feature alt text"
-        children={sectionElements}
+        sectionData={sectionElements}
         ref={refs}
       />
     </Section>

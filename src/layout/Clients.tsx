@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 import { StarRating } from '../components/star';
 
-const ClientLayout = ({ refs }) => {
+const ClientLayout = ({ refs }: any) => {
   // const stars = [];
   // for (let i = 0; i < 5; i++) {
   //   stars.push(<MdOutlineStar key={i} size={25} color="white" />);
   // }
-  const [data, setData] = useState([
+  const data = [
     {
       quote:
         "“Moved to a Homey apartment a few months ago and it's been awesome. Love the flexibility and the vibe here. My flat's cozy and stylish, and I've already made some great mates. Homes 4 Homies”",
@@ -29,7 +29,7 @@ const ClientLayout = ({ refs }) => {
       place: 'Calle San Vicente Ferrer',
       stars: 5,
     },
-  ]);
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const handlePrev = () => {

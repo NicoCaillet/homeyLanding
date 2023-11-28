@@ -1,7 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
 
-function Card({ title, description, amenities, image }) {
+interface CardProps {
+  title: string;
+  description?: string;
+  image: string;
+  amenities: string[];
+}
+
+function Card({ title, description, amenities, image }: CardProps) {
   return (
     <div className="my-4 rounded-xl p-2 shadow-card">
       <img src={image} alt="" className="" />
@@ -10,7 +17,7 @@ function Card({ title, description, amenities, image }) {
         <p className="lg:text-xl">{description}</p>
         <div>
           {amenities &&
-            amenities.map((item, index) => {
+            amenities.map((item: any, index: number) => {
               return (
                 <div
                   className="flex h-[21px] items-center justify-between "

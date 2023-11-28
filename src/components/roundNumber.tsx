@@ -1,6 +1,12 @@
 import React from 'react';
 
-function RoundNumber({ number, title, description }) {
+interface PropsRoundNumber {
+  title: string;
+  description: string;
+  number: number;
+}
+
+function RoundNumber({ number, title, description }: PropsRoundNumber) {
   return (
     <div className="relative h-52 w-52 ">
       <div className=" m-auto flex h-[60%] w-[60%] items-center justify-center rounded-full bg-primary-pretitle">

@@ -21,6 +21,7 @@ type IVerticalFeatureRowProps = {
   addtext?: string;
   lastText?: string;
   ref?: any;
+  sectionData?: Bar[];
 };
 const numbers = [
   {
@@ -70,9 +71,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6 text-xl leading-9">{props.description}</div>
         <div className="flex ">
           <div className="w-full sm:text-center">
-            {props.children &&
-              props.children.length > 0 &&
-              props.children.map((item: Bar, index) => {
+            {props.sectionData &&
+              props.sectionData.length > 0 &&
+              props.sectionData.map((item: Bar, index) => {
                 return (
                   <div className="sm:py-5" key={index}>
                     <div className="sm:w-18 mb-2 mt-8 flex h-8 w-16 items-center justify-center rounded-3xl bg-primary-pretitle text-xl font-bold text-white sm:m-auto sm:mb-5 sm:h-8 sm:rounded-2xl">
@@ -81,7 +82,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
                     <p className="text-3xl font-semibold text-white sm:text-2xl">
                       {item.title}
                     </p>
-                    <p className="pt-1 text-xl leading-9 leading-normal text-white">
+                    <p className="pt-1 text-xl leading-normal text-white">
                       {item.subtitle}
                     </p>
                   </div>
@@ -103,15 +104,13 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           </div>
         </div>
 
-        {props.children && (
-          <div className="sm:flex sm:justify-center">
-            <a href="https://www.instagram.com/homey_madcity/">
-              <button className="mt-8 w-44 rounded-lg bg-primary-graytone p-3 text-xl text-white sm:w-52 sm:font-semibold">
-                Become a Host
-              </button>
-            </a>
-          </div>
-        )}
+        <div className="sm:flex sm:justify-center">
+          <a href="https://www.instagram.com/homey_madcity/">
+            <button className="mt-8 w-44 rounded-lg bg-primary-graytone p-3 text-xl text-white sm:w-52 sm:font-semibold">
+              Become a Host
+            </button>
+          </a>
+        </div>
       </div>
 
       <div className="m-auto my-12 flex w-[100%] justify-between lg:w-[85%] sm:my-2 sm:block">

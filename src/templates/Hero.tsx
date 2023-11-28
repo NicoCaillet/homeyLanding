@@ -9,7 +9,7 @@ import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
-const Hero = ({ allRefs }) => {
+const Hero = ({ allRefs }: any) => {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' && window.innerWidth <= 768,
   );
@@ -28,6 +28,7 @@ const Hero = ({ allRefs }) => {
       setIsMobile(typeof window !== 'undefined' && window.innerWidth <= 768);
     };
 
+    // Check if window is available
     if (typeof window !== 'undefined') {
       // Add event listener for window resize
       window.addEventListener('resize', handleResize);
@@ -37,6 +38,9 @@ const Hero = ({ allRefs }) => {
         window.removeEventListener('resize', handleResize);
       };
     }
+
+    // Return a no-op function if window is undefined
+    return () => {};
   }, []);
 
   return (
@@ -94,10 +98,14 @@ const Hero = ({ allRefs }) => {
           title={
             <>
               <span className="flex justify-center text-primary-500">
-                <img src="/assets/images/Homey-Logo.svg" className="sm:w-1/2" />
+                <img
+                  src="/assets/images/Homey-Logo.svg"
+                  className="sm:w-1/2"
+                  alt="logo"
+                />
               </span>
               <p className="text-5xl text-white sm:text-2xl">
-                Let's find your next home
+                Let`s find your next home
               </p>
             </>
           }
@@ -111,12 +119,12 @@ const Hero = ({ allRefs }) => {
       <img
         src="/assets/images/LIVING.png"
         alt=""
-        className="-mb-[8px] -mt-24 sm:hidden"
+        className="-mt-24 mb-[-8px] sm:hidden"
       />
       <img
         src="/assets/images/mobilebg.svg"
         alt=""
-        className="-mb-[8px] hidden h-full w-full sm:block"
+        className="mb-[-8px] hidden h-full w-full sm:block"
       />
     </Background>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOutlineStar } from 'react-icons/md';
 
-const StarRating = ({ stars }) => {
+const StarRating = ({ stars }: any) => {
   const filledStars = Array.from({ length: stars }, (_, index) => (
     <MdOutlineStar key={index} size={25} color="white" />
   ));

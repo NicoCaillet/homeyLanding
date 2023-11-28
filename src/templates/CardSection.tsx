@@ -42,6 +42,7 @@ const CardSection = ({ ref }) => {
       setIsMobile(typeof window !== 'undefined' && window.innerWidth <= 768);
     };
 
+    // Check if window is available
     if (typeof window !== 'undefined') {
       // Add event listener for window resize
       window.addEventListener('resize', handleResize);
@@ -51,7 +52,11 @@ const CardSection = ({ ref }) => {
         window.removeEventListener('resize', handleResize);
       };
     }
+
+    // Return a no-op function if window is undefined
+    return () => {};
   }, []);
+
   return (
     <div className={`mx-auto max-w-[85%] px-3 py-24 lg:py-44`} ref={ref}>
       <h3 className="text-2xl font-medium text-primary-pretitle sm:hidden">

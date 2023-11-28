@@ -7,7 +7,13 @@ const Footer = ({ refs }) => (
     <Section>
       <div ref={refs}>
         <CenteredFooter
-          logo={<img className="m-auto" src="/assets/images/homey-blue.svg" />}
+          logo={
+            <img
+              className="m-auto"
+              src="/assets/images/homey-blue.svg"
+              alt="homeyLogo"
+            />
+          }
         ></CenteredFooter>
       </div>
     </Section>

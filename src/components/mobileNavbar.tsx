@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { IoCloseSharp } from 'react-icons/io5';
 
-const MobileNavbar = ({ refs, navigateTo }) => {
+const MobileNavbar = ({ refs, navigateTo }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -29,7 +29,11 @@ const MobileNavbar = ({ refs, navigateTo }) => {
           } absolute right-0 top-0 z-10 h-[-webkit-fill-available] w-full bg-primary-king-blue p-8`}
         >
           <div>
-            <img src="/assets/images/Homey-Logo.svg" className=" sm:w-1/6" />
+            <img
+              src="/assets/images/Homey-Logo.svg"
+              className=" sm:w-1/6"
+              alt="logo"
+            />
           </div>
           <div className="mt-5">
             <div className="block py-3  lg:inline-block">Home</div>
