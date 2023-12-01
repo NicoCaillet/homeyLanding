@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { Background } from '../background/Background';
 import { CenteredFooter } from '../footer/CenteredFooter';
 import { Section } from '../layout/Section';
@@ -8,10 +10,13 @@ const Footer = ({ refs }: any) => (
       <div ref={refs}>
         <CenteredFooter
           logo={
-            <img
-              className="m-auto"
+            <Image
               src="/assets/images/homey-blue.svg"
-              alt="homeyLogo"
+              alt=""
+              className="m-auto"
+              width={200}
+              height={200}
+              loading="lazy"
             />
           }
         ></CenteredFooter>

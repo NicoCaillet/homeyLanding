@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 type ICenteredFooterProps = {
@@ -14,7 +15,14 @@ const CenteredFooter = (props: ICenteredFooterProps) => (
       <p className="text-primary-bluetone text-4xl font-semibold">
         COMING SOON...
       </p>
-      <img src="/assets/images/results.png" alt="" className="m-auto pt-5" />
+      <Image
+        src="/assets/images/results.webp"
+        alt=""
+        className="m-auto h-full w-full pt-5"
+        width={1000}
+        height={500}
+        loading="lazy"
+      />
       <p className="pt-5 text-4xl font-semibold text-primary-pretitle">
         Get in touch!
       </p>
@@ -23,17 +31,21 @@ const CenteredFooter = (props: ICenteredFooterProps) => (
       </p>
       <div className="flex items-center justify-center pt-5">
         <a href="whatsapp://send?abid=33657126472&text=Hello%2C%I%2C%Am%2C%Interested!">
-          <img
+          <Image
             src="/assets/images/WhatsApp.svg"
             className="mr-3 w-8 rounded-xl bg-primary-pretitle"
             alt=""
+            width={10}
+            height={10}
           />
         </a>
         <a href="https://www.instagram.com/homey_madcity/">
-          <img
+          <Image
             className="w-8 rounded-xl bg-primary-pretitle"
             src="/assets/images/Instagram.svg"
             alt=""
+            width={10}
+            height={10}
           />
         </a>
       </div>

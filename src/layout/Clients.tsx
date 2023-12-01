@@ -46,10 +46,10 @@ const ClientLayout = ({ refs }: any) => {
 
   return (
     <div
-      className="h-full bg-[url('/assets/images/bg-flag.png')] bg-top"
+      className="h-full bg-[url('/assets/images/flagged.webp')] bg-top"
       ref={refs}
     >
-      <div className="h-full bg-[url('/assets/images/mountains.png')] bg-cover">
+      <div className="h-full bg-[url('/assets/images/mountains.webp')] bg-cover">
         <div className="m-[auto] max-w-[85%] text-center  ">
           <h3 className="pt-56 text-5xl font-semibold text-white sm:pt-32 sm:text-3xl">
             What our clients say

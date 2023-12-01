@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -11,10 +12,10 @@ interface CardProps {
 function Card({ title, description, amenities, image }: CardProps) {
   return (
     <div className="my-4 rounded-xl p-2 shadow-card">
-      <img src={image} alt="" className="" />
+      <Image src={image} alt="logo" width={500} height={300} loading="lazy" />
       <div className="p-2 text-black">
         <p className="text-lg font-semibold text-black lg:text-2xl">{title}</p>
-        <p className="lg:text-xl">{description}</p>
+        <p className="text-sm lg:text-xl">{description}</p>
         <div>
           {amenities &&
             amenities.map((item: any, index: number) => {
@@ -24,7 +25,12 @@ function Card({ title, description, amenities, image }: CardProps) {
                   key={index}
                 >
                   <div className="flex">
-                    <img src="/assets/images/bochini.svg" alt="" />
+                    <Image
+                      src="/assets/images/bochini.svg"
+                      alt=""
+                      width={10}
+                      height={10}
+                    />
                     <p className="lg:text-l my-[2px] ml-1 text-sm">{item}</p>
                   </div>
                   <div>

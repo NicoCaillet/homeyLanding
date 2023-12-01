@@ -17,6 +17,7 @@ const Meta = (props: IMetaProps) => {
     <>
       <Head>
         <meta charSet="UTF-8" key="charset" />
+        <meta name="theme-color" content="#6DB4DE" />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1"
@@ -29,21 +30,21 @@ const Meta = (props: IMetaProps) => {
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/webp"
           sizes="32x32"
-          href={`${router.basePath}/favicon-32x32.png`}
+          href={`${router.basePath}/minilogo.svg`}
           key="icon32"
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/webp"
           sizes="16x16"
-          href={`${router.basePath}/favicon-16x16.png`}
+          href={`${router.basePath}/minilogo.svg`}
           key="icon16"
         />
         <link
           rel="icon"
-          href={`${router.basePath}/favicon.ico`}
+          href={`${router.basePath}/minilogo.svg`}
           key="favicon"
         />
       </Head>

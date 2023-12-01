@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 type ISectionProps = {
@@ -14,7 +15,7 @@ type ISectionProps = {
 const Section = (props: ISectionProps) => (
   <div
     className={`mx-auto px-3 ${props.yPadding ? props.yPadding : 'py-16'} ${
-      props.bg && "bg-[url('/assets/images/bg-flag.png')]"
+      props.bg && "bg-[url('/assets/images/flagged.webp')]"
     }`}
     ref={props.ref}
   >
@@ -43,18 +44,23 @@ const Section = (props: ISectionProps) => (
       )}
       {props.multipleImage && (
         <div className="mb-12 text-center ">
-          <img
-            src="/assets/images/fotosss.png"
+          <Image
+            src="/assets/images/fotosss.webp"
             alt="Imagen 1"
             className="m-auto w-[90%] sm:hidden"
+            width={1000}
+            height={100}
           />
           <div className="-mt-12 flex items-baseline justify-between sm:block">
             <div className="column text-white">
               <div className="m-auto mt-8 w-[80%]">
-                <img
-                  src="/assets/images/clock.png"
-                  className="hidden sm:block"
+                <Image
+                  src="/assets/images/clock.webp"
                   alt=""
+                  className="hidden sm:block"
+                  width={300}
+                  height={300}
+                  loading="lazy"
                 />
                 <h2 className="mb-4 text-2xl font-semibold">Flexibility</h2>
                 <p className="text-lg">
@@ -66,12 +72,14 @@ const Section = (props: ISectionProps) => (
 
             <div className="column text-white ">
               <div className="m-auto mt-8 w-[80%]">
-                <img
-                  src="/assets/images/couch.png"
-                  className="hidden sm:block"
+                <Image
+                  src="/assets/images/couch.webp"
                   alt=""
+                  className="hidden sm:block"
+                  width={400}
+                  height={300}
+                  loading="lazy"
                 />
-
                 <h2 className="mb-4 text-2xl font-semibold">
                   Comfort & Design{' '}
                 </h2>
@@ -84,12 +92,14 @@ const Section = (props: ISectionProps) => (
 
             <div className="column text-white">
               <div className="m-auto mt-8 w-[80%]">
-                <img
-                  src="/assets/images/chat.png"
-                  className="hidden sm:block"
+                <Image
+                  src="/assets/images/chat.webp"
                   alt=""
+                  className="hidden sm:block"
+                  width={300}
+                  height={300}
+                  loading="lazy"
                 />
-
                 <h2 className="mb-4 text-2xl font-semibold">
                   Community Living
                 </h2>

@@ -22,9 +22,6 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
-      backgroundImage: {
-        bg: 'url(/assets/images/bg-flag.png)',
-      },
       boxShadow: {
         card: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
       },

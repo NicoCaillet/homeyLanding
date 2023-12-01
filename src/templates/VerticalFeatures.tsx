@@ -43,7 +43,7 @@ const VerticalFeatures = ({ refs }: any) => {
         preTitle="FOR LANDLORDS"
         title="Join us and see the benefits!"
         addtext="Landlords: "
-        image="/assets/images/mountain.png"
+        image="/assets/images/mountain.webp"
         imageAlt="Third feature alt text"
         sectionData={sectionElements}
         ref={refs}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import { Background } from '../background/Background';
@@ -93,19 +94,22 @@ const Hero = ({ allRefs }: any) => {
           )}
         </NavbarTwoColumns>
       </div>
-      <Section yPadding="pt-20">
+      <Section yPadding="pt-5">
         <HeroOneButton
           title={
             <>
               <span className="flex justify-center text-primary-500">
-                <img
-                  src="/assets/images/Homey-Logo.svg"
-                  className="sm:w-1/2"
+                <Image
+                  src="/assets/images/Homey-Logo.webp"
                   alt="logo"
+                  className="sm:w-1/2 nsm:w-[20%] 2xl:w-[13%]"
+                  width={300}
+                  height={100}
+                  loading="lazy"
                 />
               </span>
               <p className="text-5xl text-white sm:text-2xl">
-                Let`s find your next home
+                Let's find your next home
               </p>
             </>
           }
@@ -115,16 +119,25 @@ const Hero = ({ allRefs }: any) => {
       </Section>
 
       <StaggeredDropDown />
+      <div className="w-full">
+        <Image
+          src="/assets/images/living.webp"
+          alt=""
+          className="-mt-32 mb-[-8px] w-full lg:-mt-64 sm:hidden"
+          width={1500}
+          height={600}
+          loading="lazy"
+        />
+      </div>
 
-      <img
-        src="/assets/images/LIVING.png"
-        alt=""
-        className="-mt-24 mb-[-8px] sm:hidden"
-      />
-      <img
-        src="/assets/images/mobilebg.svg"
+      {/* CAMBIAR A WEBP FACUNDO */}
+      <Image
+        src="/assets/images/mobilebg.webp"
         alt=""
         className="mb-[-8px] hidden h-full w-full sm:block"
+        width={500}
+        height={300}
+        loading="lazy"
       />
     </Background>
   );

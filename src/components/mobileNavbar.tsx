@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { IoCloseSharp } from 'react-icons/io5';
 
@@ -26,33 +27,39 @@ const MobileNavbar = ({ refs, navigateTo }: any) => {
         <div
           className={`${
             isOpen ? 'block' : 'hidden'
-          } absolute right-0 top-0 z-10 h-[-webkit-fill-available] w-full bg-primary-king-blue p-8`}
+          } absolute right-0 top-0 z-10 h-[-webkit-fill-available] h-[809px] w-full bg-primary-king-blue p-8`}
         >
           <div>
-            <img
-              src="/assets/images/Homey-Logo.svg"
-              className=" sm:w-1/6"
+            <Image
+              src="/assets/images/Homey-Logo.webp"
               alt="logo"
+              className="sm:w-1/4"
+              width={300}
+              height={300}
+              loading="lazy"
             />
           </div>
           <div className="mt-5">
-            <div className="block py-3  lg:inline-block" onClick={toggleNavbar}>
+            <div
+              className="block cursor-pointer  py-3 lg:inline-block"
+              onClick={toggleNavbar}
+            >
               Home
             </div>
             <div
-              className="block py-3  lg:inline-block "
+              className="block cursor-pointer  py-3 lg:inline-block  "
               onClick={() => navigateTo(refs.verticalFeaturesRef, 0)}
             >
               How it Works
             </div>
             <div
-              className="block py-3  lg:inline-block "
+              className="block cursor-pointer  py-3 lg:inline-block "
               onClick={() => navigateTo(refs.verticalFeaturesRef, 2550)}
             >
               For LandLords
             </div>
             <div
-              className="block py-3  lg:inline-block "
+              className="block cursor-pointer  py-3 lg:inline-block "
               onClick={() => navigateTo(refs.footerRef, 0)}
             >
               Contact
